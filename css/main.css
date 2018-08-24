@@ -1,11 +1,83 @@
-.phone {
+.phone{
 	width: 100%;
 	height: 100%;
 }
 
-.center {
-	text-align:center; 
-	color: #ffffff;
+.phonemenu{
+	background-image:url(menu.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: 964px 1726px;
+	text-align:center;
+	width: 100%;
+	height: 100%;
+}
+
+.phonelevel{
+	background-image:url(niveles.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: 964px 1726px;
+	text-align:center;
+	width: 100%;
+	height: 100%;
+}
+
+.phonegame{
+	background-image:url(juego.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: 964px 1726px;
+	text-align:center;
+	width: 100%;
+	height: 100%;
+}
+
+.phoneinfo{
+	background-image:url(instrucciones.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: 964px 1726px;
+	text-align:center;
+	width: 100%;
+	height: 100%;
+}
+
+.phonecredit{
+	background-image:url(creditos.png);
+	background-repeat: no-repeat;
+	background-position: center; 
+	background-attachment: fixed;
+	background-size: 964px 1726px;
+	text-align:center;
+	width: 100%;
+	height: 100%;
+}
+
+.imgcenter {
+	display:block;
+	margin:auto;
+	margin:15px 80px 15px 80px;
+}
+.imgleftback {
+	display:block;
+	margin:left;
+}
+.imgleft {
+	display:block;
+	margin:left;
+	margin:15px 80px 15px 80px;
+}
+
+.imgright {
+	display:block;
+	margin:right;
+	float:right;
+	margin:15px 80px 15px 80px;
 }
 
 section {
@@ -14,11 +86,14 @@ section {
 	display: none;
 }
 
-body {
-	background-image:url(backgroundmain.jfif);
-	background-repeat: no-repeat;
-	background-position: center center; 
-	background-attachment: fixed;
-	background-size: 964px 1726px;
-	text-align:center;
+h1 {
+	font: small-caps 100%/200% serif;
+	font-size: 80px;
+}
+
+p {
+	font: small-caps 100%/200% serif;
+	font-size: 45px;
+	text-align: justify;
+	margin:15px 40px 15px 40px;
 }
