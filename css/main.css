@@ -95,8 +95,8 @@ h2 {
 }
 
 p {
-	font-family: 'Densia Sans', arial;
-	font-size: 50px;
+	font-family: 'Densia Sans';
+	font-size: 48px;
 	text-align:justify;
 	margin:40px 120px 40px 120px;
 }
@@ -106,3 +106,9 @@ p {
   font-style: normal;
   font-weight: 100;
   src: local('Aileron' ), url('Ailerons-Typeface.otf') format('otf'); }
+
+@font-face {
+  font-family: 'Densia Sans';
+  font-style: normal;
+  font-weight: 100;
+  src: local('Densia Sans' ), url('DensiaSans.otf') format('otf'); }
