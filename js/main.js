@@ -8,8 +8,12 @@
 
 window.onload = init;
 function init (){
-	document.getElementById("menup").style.display = "block";
-	
+
+	document.getElementById("loadp").style.display = "block";
+
+	var time = document.getElementById("time");
+	setTimeout(()=>{document.getElementById("loadp").style.display = "none"; document.getElementById("menup").style.display = "block";},2000);
+
 	var jugarButton = document.getElementById("jugarButton");
 	jugarButton.addEventListener('click', navigate('menup', 'levelp'));
 

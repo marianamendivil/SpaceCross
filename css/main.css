@@ -1,21 +1,25 @@
+.phoneload{
+	background-image:url("../images/carga.png");
+}
+
 .phonemenu{
-	background-image:url(menu.png);
+	background-image:url("../images/menu.png");
 }
 
 .phonelevel{
-	background-image:url(niveles.png);
+	background-image:url("../images/niveles.png");
 }
 
 .phonegame{
-	background-image:url(juego.png);
+	background-image:url("../images/juego.png");
 }
 
 .phoneinfo{
-	background-image:url(instrucciones.png);
+	background-image:url("../images/instrucciones.png");
 }
 
 .phonecredit{
-	background-image:url(creditos.png);
+	background-image:url("../images/creditos.png");
 }
 
 .imgcenter {
@@ -105,7 +109,7 @@ p {
   font-family: 'Aileron';
   font-style: normal;
   font-weight: 100;
-  src: local('Aileron' ), url('Ailerons-Typeface.otf') format('otf'); }
+  src: local('Aileron'), url('Ailerons-Typeface.otf') format('otf'); }
 
 @font-face {
   font-family: 'Densia Sans';
