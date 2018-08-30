@@ -72,6 +72,8 @@
 }
 
 .fiel0{
+	resize: horizontal;
+    width: 930px;
 	outline: 0px;
 	border-radius: 30px;
 	font-size: 106px;
@@ -84,6 +86,8 @@
 
 }
 .fiel1{
+	resize: horizontal;
+    width: 930px;
 	outline: 0px;
 	font-size: 106px;
 	margin:0px 15px 15px 15px;
