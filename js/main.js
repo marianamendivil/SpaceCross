@@ -12,7 +12,7 @@ function init (){
 	document.getElementById("loadp").style.display = "block";
 
 	var time = document.getElementById("time");
-	setTimeout(()=>{document.getElementById("loadp").style.display = "none"; document.getElementById("menup").style.display = "block";},2000);
+	setTimeout(()=>{document.getElementById("loadp").style.display = "none"; document.getElementById("menup").style.display = "block";},10);
 
 	var jugarButton = document.getElementById("jugarButton");
 	jugarButton.addEventListener('click', navigate('menup', 'levelp'));
