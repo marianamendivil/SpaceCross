@@ -41,13 +41,14 @@ function init (){
 
 	// Game
 
-		var gameHelper = document.querySelector('.gameHelper');
+	var gameHelper = document.querySelector('.gameHelper');
 
 	gameHelper.onkeyup = function(e) {
 	    var max = 7; // The maxlength you want
 	  
 	    if(gameHelper.value.length > max) {
 	      gameHelper.value = gameHelper.value.substring(0, max);
+	      alert(gameHelper.value.substring(0, max))
 	    }
 	  
 	};
