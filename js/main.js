@@ -76,23 +76,58 @@ function init (){
 }
 
 hints = {
-	'num1': 'Las copas de __ son muy frágiles',
-	'num2': 'Arteria que está al lado del hueso fémur',
-	'num3': 'Mago principal de "El Hobbit"',
-	'num4': 'Lo inhalamos, pero no lo exhalamos',
-	'num5': 'Monstruo humanoide de un solo ojo',
-	'num6': 'Se dice del animal que pone huevos',
-	'num7': 'Cantante conocido como el Rey del Pop',
-	'num8': 'En un juicio, el que recibe la condena'
+	'num1': {
+		'hint': 'Las copas de __ son muy frágiles',
+		'answ': 'cristal'
+	},
+	'num2': { 
+		'hint': 'Arteria que está al lado del hueso fémur',
+		'answ': 'femoral'
+	},
+	'num3': {
+		'hint': 'Mago principal de "El Hobbit"',
+		'answ': 'gandalf'
+	},
+	'num4': {
+		'hint': 'Lo inhalamos, pero no lo exhalamos',
+		'answ': 'oxigeno'
+	},
+	'num5': {
+		'hint': 'Monstruo humanoide de un solo ojo',
+		'answ': 'ciclope'
+	},
+	'num6': {
+		'hint': 'Se dice del animal que pone huevos',
+		'answ': 'oviparo'
+	},
+	'num7': {
+		'hint': 'Cantante conocido como el Rey del Pop',
+		'answ': 'jackson'
+	},
+	'num8': {
+		'hint': 'En un juicio, el que recibe la condena',
+		'answ': 'acusado'
+	}
+}
+
+function check(key){
+	var userAnsw = document.getElementById(key).value;
+	var answ = hints[key]['answ'].toUpperCase();
+	if (userAnsw == answ) {
+		document.getElementById(key).readOnly = true;
+		document.getElementById(key).style.border = "0px";
+		document.getElementById(key).style.padding = "2px 2px 2px 24ra px";
+	}
 }
 
 function showH(key){
-	document.getElementById("hint").innerHTML = hints[key];
+	document.getElementById("hint").innerHTML = hints[key]['hint'];
 	document.getElementById(key).style.border = "inset blue 3px";
 }
 
 function notShowH(key){	
 	document.getElementById(key).style.border = "inset rgb(238, 238, 238) 2px";
+	check(key);
 }
 
 function show (id) {

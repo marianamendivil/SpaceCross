@@ -83,6 +83,7 @@
 	padding: 0px 0px 0px 22px;
 	letter-spacing: 0.70em;
 	color: white;
+	text-transform: uppercase
 
 }
 .fiel1{
@@ -97,6 +98,7 @@
 	padding: 0px 0px 0px 22px;
 	letter-spacing: 0.65em;
 	color: white;
+	text-transform: uppercase
 }
 
 #hint{
