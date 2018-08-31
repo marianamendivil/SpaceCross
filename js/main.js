@@ -111,7 +111,7 @@ hints = {
 }
 
 function check(key){
-	var userAnsw = document.getElementById(key).value;
+	var userAnsw = document.getElementById(key).value.toUpperCase();
 	var answ = hints[key]['answ'].toUpperCase();
 	if (userAnsw == answ) {
 		document.getElementById(key).readOnly = true;
