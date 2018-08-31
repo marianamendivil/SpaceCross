@@ -41,6 +41,17 @@ function init (){
 
 	// Game
 
+		var gameHelper = document.querySelector('.gameHelper');
+
+	gameHelper.onkeyup = function(e) {
+	    var max = 7; // The maxlength you want
+	  
+	    if(gameHelper.value.length > max) {
+	      gameHelper.value = gameHelper.value.substring(0, max);
+	    }
+	  
+	};
+
 	var num1 = document.getElementById("num1");
 	num1.addEventListener('focus', ()=>{showH('num1')}, true);
 	num1.addEventListener('blur', ()=>{notShowH('num1')}, true);
@@ -111,7 +122,7 @@ hints = {
 }
 
 function check(key){
-	var userAnsw = document.getElementById(key).value.toUpperCase();
+	var userAnsw = document.getElementById(key).value.toUpperCase().substring(0,7);
 	var answ = hints[key]['answ'].toUpperCase();
 	if (userAnsw == answ) {
 		document.getElementById(key).readOnly = true;
