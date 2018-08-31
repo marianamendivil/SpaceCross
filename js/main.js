@@ -118,6 +118,9 @@ function check(key){
 		document.getElementById(key).style.border = "0px";
 		document.getElementById(key).style.padding = "2px 2px 2px 24ra px";
 	}
+	else{
+		document.getElementById(key).value = "";
+	}
 }
 
 function showH(key){
