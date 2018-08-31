@@ -77,14 +77,13 @@
 	outline: 0px;
 	border-radius: 30px;
 	font-size: 106px;
-	margin:44px 15px 12px 15px;
+	margin: 130px 15px 12px 15px;
 	background-color: transparent; 
 	/*border-radius: 30px;*/
 	padding: 0px 0px 0px 22px;
 	letter-spacing: 0.70em;
 	color: white;
 	text-transform: uppercase
-
 }
 .fiel1{
 	resize: horizontal;
@@ -103,6 +102,9 @@
 
 #hint{
 	color: white;
+	font-size: 100px;
+	text-align:center;
+	margin:55px 50px 15px 50px;
 }
 
 section {
