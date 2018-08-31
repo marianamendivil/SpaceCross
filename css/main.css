@@ -134,13 +134,14 @@ p {
 }
 
 @font-face {
-  font-family: 'Aileron';
+  font-family: Aileron;
   font-style: normal;
   font-weight: 100;
-  src: local('Aileron'), url('Ailerons-Typeface.otf') format('otf'); }
+  src: local('Aileron'), url(Ailerons-Typeface.otf); }
 
 @font-face {
-  font-family: 'Densia Sans';
+  font-family: Densia Sans;
   font-style: normal;
   font-weight: 100;
-  src: local('Densia Sans' ), url('DensiaSans.otf') format('otf'); }
+  src: local('Densia Sans'), url(DensiaSans.otf) }
+  
