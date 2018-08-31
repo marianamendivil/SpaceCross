@@ -9,6 +9,7 @@
 window.onload = init;
 function init (){
 
+	// Nav 
 	document.getElementById("loadp").style.display = "block";
 
 	var time = document.getElementById("time");
@@ -37,6 +38,46 @@ function init (){
 
 	var creditpBackButton = document.getElementById("creditpBackButton");
 	creditpBackButton.addEventListener('click', navigate('creditp', 'menup'));
+
+	// Game
+
+	var num1 = document.getElementById("num1");
+	num1.addEventListener('click', ()=>{showH('num1')}, true);
+	num1.addEventListener('blur', ()=>{notShowH('num1')}, true);
+
+	var num2 = document.getElementById("num2");
+	num2.addEventListener('click', ()=>{showH('num2')}, true);
+	num2.addEventListener('blur', ()=>{notShowH('num2')}, true);
+
+	var num3 = document.getElementById("num3");
+	num3.addEventListener('click', ()=>{showH('num3')}, true);
+	num3.addEventListener('blur', ()=>{notShowH('num3')}, true);
+
+	var num4 = document.getElementById("num4");
+	num4.addEventListener('click', ()=>{showH('num4')}, true);
+	num4.addEventListener('blur', ()=>{notShowH('num4')}, true);
+
+	var num5 = document.getElementById("num5");
+	num5.addEventListener('click', ()=>{showH('num5')}, true);
+	num5.addEventListener('blur', ()=>{notShowH('num5')}, true);
+
+}
+
+hints = {
+	'num1': 'soy 1',
+	'num2': 'soy 2',
+	'num3': 'soy 3',
+	'num4': 'soy 4',
+	'num5': 'soy 5'
+}
+
+function showH(key){
+	document.getElementById("hint").innerHTML = hints[key];
+	document.getElementById(key).style.border = "inset blue 3px";
+}
+
+function notShowH(key){	
+	document.getElementById(key).style.border = "inset rgb(238, 238, 238) 2px";
 }
 
 function show (id) {
