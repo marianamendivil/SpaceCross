@@ -42,33 +42,33 @@ function init (){
 	// Game
 
 	var num1 = document.getElementById("num1");
-	num1.addEventListener('click', ()=>{showH('num1')}, true);
+	num1.addEventListener('focus', ()=>{showH('num1')}, true);
 	num1.addEventListener('blur', ()=>{notShowH('num1')}, true);
 
 	var num2 = document.getElementById("num2");
-	num2.addEventListener('click', ()=>{showH('num2')}, true);
+	num2.addEventListener('focus', ()=>{showH('num2')}, true);
 	num2.addEventListener('blur', ()=>{notShowH('num2')}, true);
 
 	var num3 = document.getElementById("num3");
-	num3.addEventListener('click', ()=>{showH('num3')}, true);
+	num3.addEventListener('focus', ()=>{showH('num3')}, true);
 	num3.addEventListener('blur', ()=>{notShowH('num3')}, true);
 
 	var num4 = document.getElementById("num4");
-	num4.addEventListener('click', ()=>{showH('num4')}, true);
+	num4.addEventListener('focus', ()=>{showH('num4')}, true);
 	num4.addEventListener('blur', ()=>{notShowH('num4')}, true);
 
 	var num5 = document.getElementById("num5");
-	num5.addEventListener('click', ()=>{showH('num5')}, true);
+	num5.addEventListener('focus', ()=>{showH('num5')}, true);
 	num5.addEventListener('blur', ()=>{notShowH('num5')}, true);
 
 }
 
 hints = {
-	'num1': 'soy 1',
-	'num2': 'soy 2',
-	'num3': 'soy 3',
-	'num4': 'soy 4',
-	'num5': 'soy 5'
+	'num1': 'Las copas de __ son muy frágiles',
+	'num2': 'Arteria que está al lado del hueso fémur',
+	'num3': 'Mago principal de "El Hobbit"',
+	'num4': 'Lo inhalamos, pero no lo exhalamos',
+	'num5': 'Monstruo humanoide de un solo ojo'
 }
 
 function showH(key){
