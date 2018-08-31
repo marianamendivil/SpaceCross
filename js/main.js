@@ -61,6 +61,18 @@ function init (){
 	num5.addEventListener('focus', ()=>{showH('num5')}, true);
 	num5.addEventListener('blur', ()=>{notShowH('num5')}, true);
 
+	var num6 = document.getElementById("num6");
+	num6.addEventListener('focus', ()=>{showH('num6')}, true);
+	num6.addEventListener('blur', ()=>{notShowH('num6')}, true);
+
+	var num7 = document.getElementById("num7");
+	num7.addEventListener('focus', ()=>{showH('num7')}, true);
+	num7.addEventListener('blur', ()=>{notShowH('num7')}, true);
+
+	var num8 = document.getElementById("num8");
+	num8.addEventListener('focus', ()=>{showH('num8')}, true);
+	num8.addEventListener('blur', ()=>{notShowH('num8')}, true);
+
 }
 
 hints = {
@@ -68,7 +80,10 @@ hints = {
 	'num2': 'Arteria que está al lado del hueso fémur',
 	'num3': 'Mago principal de "El Hobbit"',
 	'num4': 'Lo inhalamos, pero no lo exhalamos',
-	'num5': 'Monstruo humanoide de un solo ojo'
+	'num5': 'Monstruo humanoide de un solo ojo',
+	'num6': 'Se dice del animal que pone huevos',
+	'num7': 'Cantante conocido como el Rey del Pop',
+	'num8': 'En un juicio, el que recibe la condena'
 }
 
 function showH(key){
