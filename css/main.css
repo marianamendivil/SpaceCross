@@ -71,63 +71,24 @@
 	text-align: center;
 }
 
-.field0{
-	resize: horizontal;
-    width: 930px;
-	outline: 0px;
-	border-radius: 30px;
-	font-size: 106px;
-	margin: 130px 15px 15px 15px;
-	background-color: transparent; 
-	/*border-radius: 30px;*/
-	padding: 0px 0px 0px 22px;
-	letter-spacing: 0.70em;
-	color: white;
-	text-transform: uppercase
-}
-.field1{
+.field{
+	font-family: Courier New, Courier, Mono;
 	resize: horizontal;
     width: 930px;
 	outline: 0px;
 	font-size: 106px;
-	margin:0px 15px 15px 15px;
+	margin:0px 0px 15px 15px;
 	background-color: transparent; 
 	border-radius: 30px;
-	/*border-radius: 30px;*/
-	padding: 3px 0px 0px 22px;
-	letter-spacing: 0.64em;
+	padding: 3px 0px 0px 24px;
+	letter-spacing: 0.68em;
 	color: white;
-	text-transform: uppercase
-}
-.field2{
-	resize: horizontal;
-    width: 930px;
-	outline: 0px;
-	font-size: 106px;
-	margin:0px 15px 15px 15px;
-	background-color: transparent; 
-	border-radius: 30px;
-	/*border-radius: 30px;*/
-	padding: 3px 0px 0px 22px;
-	letter-spacing: 0.60em;
-	color: white;
-	text-transform: uppercase
-}
-.field3{
-	resize: horizontal;
-    width: 930px;
-	outline: 0px;
-	font-size: 106px;
-	margin:0px 15px 15px 15px;
-	background-color: transparent; 
-	border-radius: 30px;
-	/*border-radius: 30px;*/
-	padding: 3px 0px 0px 22px;
-	letter-spacing: 0.58em;
-	color: white;
-	text-transform: uppercase
+	text-transform: uppercase;
 }
 
+#num1{
+	margin: 130px 15px 15px 15px;
+}
 #hint{
 	color: white;
 	font-size: 100px;
