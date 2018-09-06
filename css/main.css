@@ -22,6 +22,10 @@
 	background-image:url("../images/creditos.png");
 }
 
+.phonewin{
+	background-image:url("../images/gano.png");
+}
+
 .imgcenter {
 	display:block;
 	margin:auto;
@@ -77,7 +81,7 @@
     width: 930px;
 	outline: 0px;
 	font-size: 106px;
-	margin:0px 0px 15px 15px;
+	margin:0px 0px 12px 15px;
 	background-color: transparent; 
 	border-radius: 30px;
 	padding: 3px 0px 0px 24px;
@@ -93,7 +97,7 @@
 	color: white;
 	font-size: 100px;
 	text-align:center;
-	margin:35px 50px 15px 50px;
+	margin:60px 50px 15px 50px;
 }
 
 section {

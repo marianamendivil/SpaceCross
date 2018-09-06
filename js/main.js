@@ -56,6 +56,13 @@ function init (){
 	var num1 = document.getElementById("num1");
 	num1.addEventListener('focus', ()=>{showH('num1')}, true);
 	num1.addEventListener('blur', ()=>{notShowH('num1')}, true);
+	num1.addEventListener('keypress', function (e) {
+    var key = e.which || e.keyCode;
+    if (key === 13) { 
+      document.getElementById(id).focus();
+    }
+    document.getElementById(id).focus();
+}, true);
 
 	var num2 = document.getElementById("num2");
 	num2.addEventListener('focus', ()=>{showH('num2')}, true);
@@ -127,7 +134,7 @@ function check(key){
 	var answ = hints[key]['answ'].toUpperCase();
 	if (userAnsw == answ) {
 		document.getElementById(key).readOnly = true;
-		document.getElementById(key).style.border = "0px";
+		document.getElementById(key).style.border = "inset transparent 2px";
 		document.getElementById(key).style.padding = "2px 2px 2px 24ra px";
 	}
 	else{
@@ -151,6 +158,16 @@ function show (id) {
 
 function hide (id) {
 	document.getElementById(id).style.display = "none";
+}
+
+function saltar(e,id)
+{
+	(e.keyCode)?k=e.keyCode:k=e.which;
+ 
+	if(k==13)
+	{
+		document.getElementById(id).focus();
+	}
 }
 
 var navigate = function(actual, next) {
