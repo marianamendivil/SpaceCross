@@ -5,7 +5,6 @@
 	infop
 	creditp
 */
-var numhits = 0;
 window.onload = init;
 function init (){
 
@@ -90,36 +89,54 @@ function init (){
 hints = {
 	'num1': {
 		'hint': 'Las copas de __ son muy frágiles',
-		'answ': 'cristal'
+		'answ': 'cristal',
+		'checked': false
 	},
 	'num2': { 
 		'hint': 'Arteria que está al lado del hueso fémur',
-		'answ': 'femoral'
+		'answ': 'femoral',
+		'checked': false
 	},
 	'num3': {
 		'hint': 'Mago principal de "El Hobbit"',
-		'answ': 'gandalf'
+		'answ': 'gandalf',
+		'checked': false
 	},
 	'num4': {
 		'hint': 'Lo inhalamos, pero no lo exhalamos',
-		'answ': 'oxigeno'
+		'answ': 'oxigeno',
+		'checked': false
 	},
 	'num5': {
 		'hint': 'Monstruo humanoide de un solo ojo',
-		'answ': 'ciclope'
+		'answ': 'ciclope',
+		'checked': false
 	},
 	'num6': {
 		'hint': 'Se dice del animal que pone huevos',
-		'answ': 'oviparo'
+		'answ': 'oviparo',
+		'checked': false
 	},
 	'num7': {
 		'hint': 'Cantante conocido como el Rey del Pop',
-		'answ': 'jackson'
+		'answ': 'jackson',
+		'checked': false
 	},
 	'num8': {
 		'hint': 'En un juicio, el que recibe la condena',
-		'answ': 'acusado'
+		'answ': 'acusado',
+		'checked': false
 	}
+}
+
+function winner(){
+	var flag = true;
+	Object.keys(hints).forEach( element => {
+	    if (!hints[element]['checked']) {
+	    	flag = false
+	    };
+	});
+	return flag
 }
 
 function check(key){
@@ -127,27 +144,40 @@ function check(key){
 	var answ = hints[key]['answ'].toUpperCase();
 	if (userAnsw == answ) {
 		document.getElementById(key).readOnly = true;
+		hints[key]['checked'] = true;
 		document.getElementById(key).style.border = "inset transparent 2px";
 		document.getElementById(key).style.padding = "2px 2px 2px 24ra px";
-		numhits=numhits+1;
 
-		if(numhits==8){
-			setTimeout(()=>{document.getElementById("gamep").style.display = "none"; document.getElementById("winp").style.display = "block";},20);
-			setTimeout(()=>{document.getElementById("winp").style.display = "none"; document.getElementById("levelp").style.display = "block";},3000);
+		if(winner()){
+			document.getElementById("hint").innerHTML = "¡Felicitaciones, has ganado! ^-^";
+			setTimeout(()=>{
+				document.getElementById("gamep").style.display = "none";
+				document.getElementById("levelp").style.display = "block";
+			}, 3000)
+			//setTimeout(()=>{document.getElementById("gamep").style.display = "none"; document.getElementById("winp").style.display = "block";},20);
+			//setTimeout(()=>{document.getElementById("winp").style.display = "none"; document.getElementById("levelp").style.display = "block";},3000);
 		}
 	}
 	else{
-		document.getElementById(key).value = "";
+		if (userAnsw == '') {
+			document.getElementById(key).style.border = "inset rgb(238, 238, 238) 2px";
+		} else {
+			document.getElementById(key).value = "";
+			document.getElementById(key).style.border = "inset red 3px";
+			setTimeout(()=>{document.getElementById(key).style.border = "inset rgb(238, 238, 238) 2px";}, 1000);
+		}
 	}
 }
 
 function showH(key){
 	document.getElementById("hint").innerHTML = hints[key]['hint'];
-	document.getElementById(key).style.border = "inset blue 3px";
+	if (!hints[key]['checked']) {	
+		document.getElementById(key).style.border = "inset blue 3px";
+	}
 }
 
 function notShowH(key){	
-	document.getElementById(key).style.border = "inset rgb(238, 238, 238) 2px";
+	
 	check(key);
 }
 
