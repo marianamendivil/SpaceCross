@@ -5,7 +5,7 @@
 	infop
 	creditp
 */
-
+var numhits = 0;
 window.onload = init;
 function init (){
 
@@ -56,13 +56,6 @@ function init (){
 	var num1 = document.getElementById("num1");
 	num1.addEventListener('focus', ()=>{showH('num1')}, true);
 	num1.addEventListener('blur', ()=>{notShowH('num1')}, true);
-	num1.addEventListener('keypress', function (e) {
-    var key = e.which || e.keyCode;
-    if (key === 13) { 
-      document.getElementById(id).focus();
-    }
-    document.getElementById(id).focus();
-}, true);
 
 	var num2 = document.getElementById("num2");
 	num2.addEventListener('focus', ()=>{showH('num2')}, true);
@@ -136,6 +129,12 @@ function check(key){
 		document.getElementById(key).readOnly = true;
 		document.getElementById(key).style.border = "inset transparent 2px";
 		document.getElementById(key).style.padding = "2px 2px 2px 24ra px";
+		numhits=numhits+1;
+
+		if(numhits==8){
+			setTimeout(()=>{document.getElementById("gamep").style.display = "none"; document.getElementById("winp").style.display = "block";},20);
+			setTimeout(()=>{document.getElementById("winp").style.display = "none"; document.getElementById("levelp").style.display = "block";},3000);
+		}
 	}
 	else{
 		document.getElementById(key).value = "";
